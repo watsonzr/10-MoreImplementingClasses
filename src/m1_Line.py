@@ -408,7 +408,7 @@ class Line(object):
           :rtype: float
         """
         # --------------------------------------------------------------
-        # TODO: 6.
+        # DONE: 6.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -417,11 +417,12 @@ class Line(object):
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
 
-        # if self.start.x == self.end.x:
-        #     slope = math.inf
-        # else:
-        #     slope = (self.start.y - self.end.y) / (self.start.x - self.end.x)
-        # return slope
+        if self.start.x == self.end.x:
+            # slope = math.inf
+            slope = 10000000
+        else:
+            slope = (self.start.y - self.end.y) / (self.start.x - self.end.x)
+        return slope
 
     def length(self):
         """
@@ -628,7 +629,7 @@ class Line(object):
           :rtype: bool
         """
         # --------------------------------------------------------------
-        # TODO: 12.
+        # DONE: 12.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -663,10 +664,10 @@ class Line(object):
         # are different from each other.
         ################################################################
 
-        # if round(self.slope(), 12) == round(line2.slope(), 12):
-        #     return True
-        # else:
-        #     return False
+        if round(self.slope(), 12) == round(line2.slope(), 12):
+            return True
+        else:
+            return False
 
     def reset(self):
         """

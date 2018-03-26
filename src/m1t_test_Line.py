@@ -343,7 +343,8 @@ def run_test_slope():
         expected = -0.0  # Both positive and negative zero are correct.
     evaluate_test(expected, actual, 'Testing a horizontal line')
 
-    expected = math.inf
+    #expected = math.inf
+    expected = 10000000
     actual = line4.slope()
     evaluate_test(expected, actual, 'Testing a vertical line:')
 
