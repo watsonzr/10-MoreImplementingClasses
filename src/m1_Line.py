@@ -418,8 +418,7 @@ class Line(object):
         # --------------------------------------------------------------
 
         if self.start.x == self.end.x:
-            # slope = math.inf
-            slope = 10000000
+            slope = math.inf
         else:
             slope = (self.start.y - self.end.y) / (self.start.x - self.end.x)
         return slope
